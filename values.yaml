@@ -1,0 +1,16 @@
+metrics:
+  enabled: true
+
+keycloakConfigCli:
+  enabled: true
+  configuration:
+    enable-events.json: |
+      {
+        "realm": "master",
+        "eventsEnabled": true,
+        "adminEventsEnabled": true,
+        "eventsListeners": [
+          "metrics-listener",
+          "jboss-logging"
+        ]
+      }
